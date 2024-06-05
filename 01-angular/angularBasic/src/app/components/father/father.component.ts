@@ -1,5 +1,6 @@
 import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import { timer } from 'rxjs';
+import { WhoIsInTheHouseService } from '../../services/who-is-in-the-house.service';
 
 @Component({
   selector: 'app-father',
@@ -11,16 +12,18 @@ export class FatherComponent {
 
   @Output() emitOccupant: EventEmitter<string>;
 
-  constructor(private elementRef: ElementRef) {
+  constructor(private _whoIsInTheHouse: WhoIsInTheHouseService,
+              private _elementRef: ElementRef) {
     this.name = '';
     this.emitOccupant = new EventEmitter();
   }
 
   emmitWhoIsInTheHouse(nameOccupant: string = ''): void {
-    this.elementRef.nativeElement.firstElementChild.style.backgroundColor = 'orange';
-    timer(2000).subscribe(() => {
-      this.emitOccupant.emit(nameOccupant || this.name);
-      this.elementRef.nativeElement.firstElementChild.style.backgroundColor = 'inherit';
-    });
+    this._whoIsInTheHouse.setName(this.name);
+    // this._elementRef.nativeElement.firstElementChild.style.backgroundColor = 'orange';
+    // timer(2000).subscribe(() => {
+    //   this.emitOccupant.emit(nameOccupant || this.name);
+    //   this._elementRef.nativeElement.firstElementChild.style.backgroundColor = 'inherit';
+    // });
   }
 }
