@@ -8,6 +8,8 @@ import { SonComponent } from './components/son/son.component';
 import { FatherComponent } from './components/father/father.component';
 import { GrandfatherComponent } from './components/grandfather/grandfather.component';
 import { HouseComponent } from './components/house/house.component';
+import { RequestsComponent } from './components/requests/requests.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { HouseComponent } from './components/house/house.component';
     SonComponent,
     FatherComponent,
     GrandfatherComponent,
-    HouseComponent
+    HouseComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,13 @@
+<section>
+  <ul style="width: 600px">
+    <li *ngFor="let user of users" style="display: flex;align-items: center">
+      <label>{{ user.name }}</label>
+      <button style="margin-left: auto;margin-top: 10px" (click)="deleteUser(user.id)">Delete User</button>
+    </li>
+  </ul>
+
+  <div style="display:flex;justify-content: center">
+    <input type="text" #inputUser>
+    <button (click)="createUser(inputUser.value)">Create User</button>
+  </div>
+</section>
