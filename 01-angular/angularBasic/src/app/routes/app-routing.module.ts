@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BasicComponent } from '../components/basic/basic.component';
 import { HouseComponent } from '../components/house/house.component';
 import { RequestsComponent } from '../components/requests/requests.component';
+import { DirectiveExampleComponent } from '../components/directive-example/directive-example.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,9 @@ const routes: Routes = [
   },
   {
     path: 'request', component: RequestsComponent
+  },
+  {
+    path: 'directives', component: DirectiveExampleComponent
   },
   {
     path: '',

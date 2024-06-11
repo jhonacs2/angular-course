@@ -10,6 +10,9 @@ import { GrandfatherComponent } from './components/grandfather/grandfather.compo
 import { HouseComponent } from './components/house/house.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DirectiveExampleComponent } from './components/directive-example/directive-example.component';
+import { CMonDoSomethingDirective } from './directives/c-mon-do-something.directive';
+import { InputDirective } from './directives/input.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HttpClientModule } from '@angular/common/http';
     FatherComponent,
     GrandfatherComponent,
     HouseComponent,
-    RequestsComponent
+    RequestsComponent,
+    DirectiveExampleComponent,
+    CMonDoSomethingDirective,
+    InputDirective
   ],
   imports: [
     BrowserModule,
