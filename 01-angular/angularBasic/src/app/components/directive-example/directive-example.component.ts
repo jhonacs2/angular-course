@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./directive-example.component.scss']
 })
 export class DirectiveExampleComponent implements OnInit {
+  public inputColor: string;
 
-  constructor() { }
+  constructor() {
+    this.inputColor = 'red';
+  }
 
   ngOnInit(): void {
   }
 
+  changeInputColor(color: string): void {
+    this.inputColor = color;
+  }
 }

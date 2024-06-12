@@ -1,3 +1,4 @@
+<!--
 <article>
   <p class="user" logText="text">1</p>
   <p class="user" logText="text" >2</p>
@@ -5,4 +6,17 @@
   <p class="user" logText="text 2" isVisible="true">4</p>
   <p class="user" logText="text 3 " isVisible="true">5</p>
   <p class="user" logText="text 4" >Hello</p>
+</article>
+-->
+<article>
+  <input style="display: block;margin-bottom: 10px" type="text"
+         appHighlightOnFocus
+         [highlightColor]="inputColor">
+  <input type="text">
+
+  <div style="margin-top: 20px;display: flex;gap: 10px">
+    <button (click)="changeInputColor('red')">Red</button>
+    <button (click)="changeInputColor('blue')">Blue</button>
+    <button (click)="changeInputColor('yellow')">Yellow</button>
+  </div>
 </article>
