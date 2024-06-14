@@ -4,6 +4,7 @@ import { BasicComponent } from '../components/basic/basic.component';
 import { HouseComponent } from '../components/house/house.component';
 import { RequestsComponent } from '../components/requests/requests.component';
 import { DirectiveExampleComponent } from '../components/directive-example/directive-example.component';
+import { PipesExampleComponent } from '../components/pipes-example/pipes-example.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,9 @@ const routes: Routes = [
   },
   {
     path: 'directives', component: DirectiveExampleComponent
+  },
+  {
+    path: 'pipes', component: PipesExampleComponent
   },
   {
     path: '',

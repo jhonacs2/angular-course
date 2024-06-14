@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { DirectiveExampleComponent } from './components/directive-example/directive-example.component';
 import { CMonDoSomethingDirective } from './directives/c-mon-do-something.directive';
 import { HighlightColourDirective } from './directives/highlightColour.directive';
+import { PipesExampleComponent } from './components/pipes-example/pipes-example.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { HighlightColourDirective } from './directives/highlightColour.directive
     RequestsComponent,
     DirectiveExampleComponent,
     CMonDoSomethingDirective,
-    HighlightColourDirective
+    HighlightColourDirective,
+    PipesExampleComponent
   ],
   imports: [
     BrowserModule,
