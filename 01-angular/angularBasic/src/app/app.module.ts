@@ -14,6 +14,8 @@ import { DirectiveExampleComponent } from './components/directive-example/direct
 import { CMonDoSomethingDirective } from './directives/c-mon-do-something.directive';
 import { HighlightColourDirective } from './directives/highlightColour.directive';
 import { PipesExampleComponent } from './components/pipes-example/pipes-example.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
+import { FilterGreaterThanPipe } from './pipes/filter-greater-than.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { PipesExampleComponent } from './components/pipes-example/pipes-example.
     DirectiveExampleComponent,
     CMonDoSomethingDirective,
     HighlightColourDirective,
-    PipesExampleComponent
+    PipesExampleComponent,
+    TruncatePipe,
+    FilterGreaterThanPipe
   ],
   imports: [
     BrowserModule,
