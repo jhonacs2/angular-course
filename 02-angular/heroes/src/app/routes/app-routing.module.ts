@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('../modules/public/public.module').then(p => p.PublicModule)
   },
+  {
+    path: 'heroes',
+    loadChildren: () => import('../modules/private/private.module').then(p => p.PrivateModule)
+  },
 ];
 
 @NgModule({
