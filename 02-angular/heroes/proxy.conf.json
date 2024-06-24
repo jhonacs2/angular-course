@@ -1,0 +1,10 @@
+{
+  "/marvel": {
+    "target": "https://gateway.marvel.com/v1/public",
+    "secure": false,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/marvel": ""
+    }
+  }
+}

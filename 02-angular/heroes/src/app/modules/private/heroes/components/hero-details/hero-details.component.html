@@ -1,9 +1,9 @@
-<article class="hero-section container">
-  <img class="w100 h100 hero-image" style="position: absolute;top: -50px;z-index: -1;object-fit: cover" src="assets/images/spider.jpg" alt="">
-  <div class="hero-details-container">
+<article class="hero-section container" *ngIf="characterDetails">
+  <img class="w100 h100 hero-image slide-in-fwd-center" [src]="thumbnail" [alt]="characterDetails.name">
+  <div class="hero-details-container slide-in-fwd-center">
     <div class="hero-detail-main">
-      <p class="hero-detail-name">Spider-Man’s 60th</p>
-      <p class="hero-detail-bio"> Celebrate Spidys 60th annivessary with most of is most iconic stories!</p>
+      <p class="hero-detail-name">{{ characterDetails.name }}</p>
+      <p class="hero-detail-bio"> {{ characterDetails.description }}</p>
     </div>
 
     <div class="hero-actions">
