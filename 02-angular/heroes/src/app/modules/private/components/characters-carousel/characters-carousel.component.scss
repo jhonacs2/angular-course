@@ -1,0 +1,35 @@
+.characters-carousel-container {
+  --red-filter: invert(49%) sepia(93%) saturate(7402%) hue-rotate(347deg) brightness(123%) contrast(129%);
+  display: flex;
+  gap: 20px;
+  font-size: 3.6rem;
+  align-items: baseline;
+
+  .carousel-button {
+    height: 4rem;
+    transform: translateY(15%);
+
+    &:hover {
+      filter: var(--red-filter);
+    }
+
+    &-rotate {
+      height: 4rem;
+      transform: rotate(180deg) translateY(-15%);
+
+      &:hover {
+        filter: var(--red-filter);
+      }
+    }
+  }
+
+  .carousel-num {
+    transition: font-size ease-in-out .15s;
+  }
+
+  .character-selected {
+    transition: font-size ease-in-out .15s;
+    font-size: 7rem;
+    color: var(--first-color);
+  }
+}

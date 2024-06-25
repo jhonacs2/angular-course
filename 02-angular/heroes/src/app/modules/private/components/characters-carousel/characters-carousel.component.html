@@ -1,0 +1,13 @@
+<section class="characters-carousel-container">
+  <button class="carousel-button" (click)="carouselHandler(-1)">
+    <img src="assets/svg/arrow.svg" alt="arrow">
+  </button>
+  <span *ngFor="let item of carouselItems"
+        class="carousel-num"
+        [ngClass]="{'character-selected': item.selected}">
+    {{ item.value }}
+  </span>
+  <button class="carousel-button-rotate" (click)="carouselHandler(+1)">
+    <img src="assets/svg/arrow.svg" alt="arrow">
+  </button>
+</section>

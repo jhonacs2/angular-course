@@ -58,3 +58,10 @@ input, button, select, textarea, optgroup, option {
 nav {
   list-style: none;
 }
+
+button{
+  background: none;
+  border-radius: 0.8rem;
+  border: none;
+  cursor: pointer;
+}

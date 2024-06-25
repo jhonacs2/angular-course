@@ -10,4 +10,11 @@
       <button class="h-button">Read More</button>
     </div>
   </div>
+
+  <app-characters-carousel
+    class="hero-carousel"
+    [numberOfItems]="numberOfAvenger"
+    [itemSelected]="avengerPosition"
+    (itemSelectedChange)="itemSelectedChange($event)">
+  </app-characters-carousel>
 </article>
