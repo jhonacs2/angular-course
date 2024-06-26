@@ -4,11 +4,13 @@ import { HeroesRoutesModule } from './routes/heroes-routes.module';
 import { SharedComponentsModule } from '../components/shared-components.module';
 import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 import { CommonModule } from '@angular/common';
+import { TeamHeroesComponent } from './components/team-heroes/team-heroes.component';
 
 @NgModule({
   declarations: [
     StarkTowerComponent,
-    HeroDetailsComponent
+    HeroDetailsComponent,
+    TeamHeroesComponent
   ],
   imports: [
     CommonModule,

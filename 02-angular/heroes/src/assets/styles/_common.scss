@@ -62,3 +62,35 @@
     outline: solid var(--first-color-alt);
   }
 }
+
+.h-cursor-p {
+  cursor: pointer;
+}
+
+.h-font-xxs {
+  font-size: 1.2rem;
+}
+
+.h-font-xs {
+  font-size: 1.6rem;
+}
+
+.h-font-s {
+  font-size: 2.4rem;
+}
+
+.h-font-m {
+  font-size: 3.2rem;
+}
+
+.h-font-l {
+  font-size: 5rem;
+}
+
+.h-font-xl {
+  font-size: 7rem;
+}
+
+.h-font-w-bold{
+  font-weight: bold;
+}
