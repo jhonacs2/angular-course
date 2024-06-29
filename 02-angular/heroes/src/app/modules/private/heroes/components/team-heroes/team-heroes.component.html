@@ -17,20 +17,15 @@
     </div>
 
     <div class="team-card-container">
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
+      <div class="team-card" *ngFor="let hero of characterDetails | async">
+        <figure>
+          <img class="w100 h100"
+               [src]="hero.thumbnail | marvelThumbnail : THUMBNAIL_SIZE "
+               alt="{{hero.name}} portrait">
 
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
-      <div class="team-card">T</div>
+          <span class="hero-name h-font-s h-font-w-bold" [title]="hero.name">{{ hero.name }}</span>
+        </figure>
+      </div>
     </div>
   </div>
 </article>

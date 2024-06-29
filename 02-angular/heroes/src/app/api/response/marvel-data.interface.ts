@@ -1,27 +1,27 @@
-export interface MarvelResponse {
+export interface MarvelResponse<T> {
   code: number;
   status: string;
   copyright: string;
   attributionText: string;
   attributionHTML: string;
   etag: string;
-  data: MarvelData;
+  data: T;
 }
 
-export interface MarvelData {
+export interface MarvelData<T> {
   offset: number;
   limit: number;
   total: number;
   count: number;
-  results: ResultMarvel[];
+  results: T[];
 }
 
-export interface ResultMarvel {
+export interface CharacterDetails {
   id: number;
   name: string;
   description: string;
   modified: string;
-  thumbnail: Thumbnail;
+  thumbnail: MarvelThumbnail;
   resourceURI: string;
   comics: Comics;
   series: Comics;
@@ -60,7 +60,7 @@ export enum Type {
   InteriorStory = 'interiorStory',
 }
 
-export interface Thumbnail {
+export interface MarvelThumbnail {
   path: string;
   extension: string;
 }

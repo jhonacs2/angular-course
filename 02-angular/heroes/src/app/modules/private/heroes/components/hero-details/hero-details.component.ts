@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MarvelService } from '../../../services/marvel.service';
 import { avengers, selectRandomAvenger } from '../../../utils/select-random-avenger.function';
 import { first } from 'rxjs/operators';
-import { ResultMarvel } from '../../../../../api/response/marvel-data.interface';
+import { CharacterDetails } from '../../../../../api/response/marvel-data.interface';
 
 @Component({
   selector: 'app-hero-details',
@@ -11,7 +11,7 @@ import { ResultMarvel } from '../../../../../api/response/marvel-data.interface'
 })
 export class HeroDetailsComponent implements OnInit {
   avengerPosition: number;
-  characterDetails!: ResultMarvel;
+  characterDetails!: CharacterDetails;
   thumbnail: string;
   numberOfAvenger: number = 0;
 
