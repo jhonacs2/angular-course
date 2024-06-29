@@ -1,0 +1,14 @@
+<app-nav-bar></app-nav-bar>
+<article class="doom-lair-container">
+  <div class="doom-landscape-img-container">
+    <img class="w100 h100" src="assets/images/doom_landscape.webp" alt="Doctor Doom Landscape">
+  </div>
+
+  <div class="doom-slider-container" reverse="true">
+    <div class="card-list">
+      <div *ngFor="let characterDetails of characterDetails | async; index as i" class="card" style="--position: {{i}}">
+        <img class="w100 h100 h-object-fit-cover" [src]="characterDetails.thumbnail | marvelThumbnail : THUMBNAIL_SIZE " [alt]="characterDetails.name">
+      </div>
+    </div>
+  </div>
+</article>

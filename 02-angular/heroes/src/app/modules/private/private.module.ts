@@ -4,8 +4,11 @@ import { MarvelService } from './services/marvel.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [PrivateRoutesModule, HttpClientModule],
-  providers: [MarvelService]
+  imports: [
+    PrivateRoutesModule,
+    HttpClientModule
+  ],
+  providers: [MarvelService],
 })
 export class PrivateModule {
 }

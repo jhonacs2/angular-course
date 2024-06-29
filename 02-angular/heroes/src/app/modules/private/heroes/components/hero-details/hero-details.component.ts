@@ -25,7 +25,7 @@ export class HeroDetailsComponent implements OnInit {
     this._initialize();
   }
 
-  itemSelectedChange(itemSelect: number) {
+  itemSelectedChange(itemSelect: number): void {
     const avengerSelected = avengers[itemSelect];
     this._getCharacterByName(avengerSelected);
   }

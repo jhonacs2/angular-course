@@ -6,6 +6,10 @@ const routes: Routes = [
   {
     path: 'tower',
     loadChildren: () => import('../heroes/heroes.module').then(p => p.HeroesModule)
+  },
+  {
+    path: 'doom_lair',
+    loadChildren: () => import('../villains/villains.module').then(p => p.VillainsModule)
   }
 ];
 
