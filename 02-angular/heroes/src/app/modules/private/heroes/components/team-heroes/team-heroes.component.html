@@ -16,16 +16,22 @@
       </div>
     </div>
 
-    <div class="team-card-container">
-      <div class="team-card" *ngFor="let hero of characterDetails | async">
-        <figure>
-          <img class="w100 h100"
-               [src]="hero.thumbnail | marvelThumbnail : THUMBNAIL_SIZE "
-               alt="{{hero.name}} portrait">
+    <div class="team-card-container min-h-container">
+      <ng-container *ngIf="(characterDetails$ | async) as characterDetails else loading">
+        <div class="team-card" *ngFor="let hero of characterDetails">
+          <figure>
+            <img class="w100 h100"
+                 [src]="hero.thumbnail | marvelThumbnail : THUMBNAIL_SIZE "
+                 alt="{{hero.name}} portrait">
 
-          <span class="hero-name h-font-s h-font-w-bold" [title]="hero.name">{{ hero.name }}</span>
-        </figure>
-      </div>
+            <span class="hero-name h-font-s h-font-w-bold" [title]="hero.name">{{ hero.name }}</span>
+          </figure>
+        </div>
+      </ng-container>
+
+      <ng-template #loading>
+        <app-loading></app-loading>
+      </ng-template>
     </div>
   </div>
 </article>

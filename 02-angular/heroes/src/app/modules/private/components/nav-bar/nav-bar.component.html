@@ -5,8 +5,9 @@
 
   <nav class="nav-bar-container">
     <ul>
-      <li class="h-cursor-p" routerLink="./">Heroes</li>
-      <li class="h-cursor-p" routerLink="./team">Team</li>
+      <li class="h-cursor-p" *ngFor="let detail of navBarList">
+        <a [routerLink]="detail.routerLink">{{detail.value}}</a>
+      </li>
     </ul>
   </nav>
 

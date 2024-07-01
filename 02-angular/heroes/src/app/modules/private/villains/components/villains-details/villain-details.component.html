@@ -1,0 +1,18 @@
+<app-nav-bar [navBarList]="navBarList"></app-nav-bar>
+<article class="villain-details-container" *ngIf="characterDetails$ | async as character">
+  <div class="villain-details" style="flex-basis: 70%">
+    <h1 class="h-font-l h-font-w-bold h-text-align-center">{{character.name}}</h1>
+
+    <p  *ngIf="character.description.length > 0 else other_content" class="h-font-m villain-description">{{character.description}}</p>
+    <ng-template #other_content>
+      <p class="h-font-m villain-description h-text-align-center">No Description Available</p>
+    </ng-template>
+
+  </div>
+
+  <div class="villain-img" style="flex-basis: 30%;max-height: 50rem">
+    <picture class="w100 h100">
+      <img class="w100 h100 h-object-fit-cover" [src]="character.thumbnail | marvelThumbnail: THUMBNAIL_SIZE" [alt]="character.name">
+    </picture>
+  </div>
+</article>

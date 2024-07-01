@@ -48,4 +48,11 @@ export class CharactersCarouselComponent implements OnInit {
     this.carouselItems[this._indexSelected].selected = true;
     this.itemSelectedChange.next(this._indexSelected);
   }
+
+  selectCarouselNumber(i: number): void {
+    this.carouselItems[this._indexSelected].selected = false;
+    this._indexSelected = i;
+    this.carouselItems[i].selected = true;
+    this.itemSelectedChange.next(i);
+  }
 }

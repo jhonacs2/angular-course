@@ -59,9 +59,15 @@ nav {
   list-style: none;
 }
 
-button{
+button {
   background: none;
   border-radius: 0.8rem;
   border: none;
   cursor: pointer;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+

@@ -43,12 +43,13 @@
         animation-delay: calc((10s / var(--quantity)) * (var(--position) - 1)) !important;
         animation: heroAutoRunSlider 10s linear infinite;
         border-radius: 0.8rem;
+        cursor: pointer;
         height: var(--height);
         left: 100%;
+        overflow: hidden;
         position: absolute;
         transition: filter 0.5s;
         width: var(--width);
-        overflow: hidden;
       }
     }
   }

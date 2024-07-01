@@ -24,6 +24,17 @@ export class MarvelService {
     }).pipe(map(response => response.data.results[0]));
   }
 
+  getCharacterById(characterId: number): Observable<CharacterDetails> {
+    return this._httpClient.get<MarvelResponse<MarvelData<CharacterDetails>>>(`${this.baseUrl}/characters/${characterId}`, {
+      params: {
+        characterId,
+        apikey: environment.apikey,
+        ts: environment.ts,
+        hash: environment.hash,
+      }
+    }).pipe(map(response => response.data.results[0]));
+  }
+
   getCharactersBySeriesId(seriesId: number, offset: number = 1, limit: number = 10,): Observable<CharacterDetails[]> {
     return this._httpClient.get<MarvelResponse<MarvelData<CharacterDetails>>>(`${this.baseUrl}/characters`, {
       params: {

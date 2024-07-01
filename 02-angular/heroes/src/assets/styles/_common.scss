@@ -5,6 +5,10 @@
   max-width: 142.3rem;
 }
 
+.min-h-container {
+  min-height: 40rem;
+}
+
 .w100 {
   width: 100%;
 }
@@ -17,7 +21,7 @@
   height: 100%;
 }
 
-.h-object-fit-cover{
+.h-object-fit-cover {
   object-fit: cover;
 }
 
@@ -95,6 +99,20 @@
   font-size: 7rem;
 }
 
-.h-font-w-bold{
+.h-font-w-bold {
   font-weight: bold;
+}
+
+.h-text-align-center {
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);
+  outline: none;
+  border-radius: 0.8rem;
 }

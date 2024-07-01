@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { CharactersCarouselComponent } from './characters-carousel/characters-carousel.component';
 import { RouterModule } from '@angular/router';
+import { LoadingComponent } from './loading/loading.component';
 
 @NgModule({
   declarations: [
     NavBarComponent,
-    CharactersCarouselComponent
+    CharactersCarouselComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule,
@@ -15,7 +17,8 @@ import { RouterModule } from '@angular/router';
   ],
   exports: [
     NavBarComponent,
-    CharactersCarouselComponent
+    CharactersCarouselComponent,
+    LoadingComponent
   ]
 })
 export class SharedComponentsModule {

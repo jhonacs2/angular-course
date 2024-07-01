@@ -11,6 +11,7 @@ import { CharacterDetails } from '../../../../../api/response/marvel-data.interf
 })
 export class DoomLairComponent implements OnInit {
   public characterDetails: Observable<CharacterDetails[]>;
+  public navBarList: { value: string, routerLink: string }[];
 
   public THUMBNAIL_SIZE: MarvelPortraitThumbnails = MarvelPortraitThumbnails.X_LARGE;
 
@@ -18,6 +19,7 @@ export class DoomLairComponent implements OnInit {
 
   constructor(private _marvelService: MarvelService) {
     this.characterDetails = new Observable<CharacterDetails[]>();
+    this.navBarList = [];
   }
 
   ngOnInit(): void {
@@ -26,5 +28,11 @@ export class DoomLairComponent implements OnInit {
 
   private _initialize(): void {
     this.characterDetails = this._marvelService.getCharactersBySeriesId(this.AVENGER_SERIES_ID);
+    this.navBarList = [
+      {
+        value: 'Villains',
+        routerLink: './'
+      }
+    ];
   }
 }
