@@ -1,0 +1,45 @@
+.hero-section {
+  min-height: 61.8rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  .hero-image {
+    mask-image: linear-gradient(black 80%, transparent),
+    linear-gradient(to top, black 80%, transparent),
+    linear-gradient(to right, black 80%, transparent),
+    linear-gradient(to left, black 80%, transparent);
+    mask-composite: intersect;
+    object-fit: cover;
+    position: absolute;
+    top: -50px;
+    z-index: -1;
+  }
+
+  .hero-details-container {
+    width: 100%;
+
+    .hero-detail-main {
+      margin-bottom: 6rem;
+
+      .hero-detail-name {
+        font-size: 10rem;
+        margin-bottom: 1.8rem;
+      }
+
+      .hero-detail-bio {
+        max-width: 50%;
+        font-size: 3.2rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .hero-carousel {
+    position: absolute;
+    bottom: 50px;
+    right: 0
+  }
+}

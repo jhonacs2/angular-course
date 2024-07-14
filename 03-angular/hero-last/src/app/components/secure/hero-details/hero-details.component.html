@@ -1,1 +1,25 @@
-<p>hero-details works!</p>
+<article class="hero-section container min-h-container">
+  @if (characterDetails) {
+    <img class="w100 h100 hero-image slide-in-fwd-center" [src]="thumbnail" [alt]="characterDetails.name">
+
+    <div class="hero-details-container slide-in-fwd-center">
+      <div class="hero-detail-main">
+        <p class="hero-detail-name">{{ characterDetails.name }}</p>
+        <p class="hero-detail-bio"> {{ characterDetails.description }}</p>
+      </div>
+
+      <div class="hero-actions">
+        <button class="h-button">Read More</button>
+      </div>
+    </div>
+
+    <app-characters-carousel
+      class="hero-carousel"
+      [numberOfItems]="numberOfAvenger"
+      [itemSelected]="avengerPosition"
+      (itemSelectedChange)="itemSelectedChange($event)">
+    </app-characters-carousel>
+  } @else {
+    <app-loading></app-loading>
+  }
+</article>

@@ -1,0 +1,16 @@
+<section class="characters-carousel-container">
+  <button class="carousel-button" (click)="carouselHandler(-1)">
+    <img src="svg/arrow.svg" alt="arrow">
+  </button>
+  @for (item of carouselItems; let index = $index; track index) {
+    <span class="carousel-num"
+          [ngClass]="{'character-selected': item.selected}"
+          (click)="selectCarouselNumber(index)">
+    {{ item.value }}
+  </span>
+  }
+
+  <button class="carousel-button-rotate" (click)="carouselHandler(+1)">
+    <img src="svg/arrow.svg" alt="arrow">
+  </button>
+</section>
