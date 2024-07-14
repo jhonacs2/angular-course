@@ -1,0 +1,17 @@
+<header class="header-container container">
+  <a class="header-logo">
+    <img class="w100 h100" src="svg/marvel-logo.svg" alt="marvel logo">
+  </a>
+
+  <nav class="nav-bar-container">
+    <ul>
+      @for(detail of navBarList();track detail.value){
+        <li class="h-cursor-p">
+          <a [routerLink]="detail.routerLink">{{detail.value}}</a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <button class="h-button">Log out</button>
+</header>
