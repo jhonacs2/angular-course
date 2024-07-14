@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --normal-font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--body-font);
+}
+
+html {
+  font-size: var(--normal-font-size);
+  scroll-behavior: smooth;
+
+}
+
+body {
+  background: var(--body-color);
+  color: var(--text-color);
+}

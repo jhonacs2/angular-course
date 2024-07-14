@@ -1,0 +1,118 @@
+/*CONTAINER*/
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 142.3rem;
+}
+
+.min-h-container {
+  min-height: 40rem;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.w70 {
+  width: 70%;
+}
+
+.h100 {
+  height: 100%;
+}
+
+.h-object-fit-cover {
+  object-fit: cover;
+}
+
+.d-block {
+  display: block;
+}
+
+.p-relative {
+  position: relative;
+}
+
+.h-input {
+  border-radius: 0.8rem;
+  border: none;
+  font-size: 1.6rem;
+  outline: solid var(--border-color);
+  padding: 1.2rem 1.6rem;
+  width: 100%;
+
+  &:focus {
+    outline: solid var(--first-color);
+  }
+
+  &::placeholder {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+  }
+}
+
+.h-button {
+  background-color: var(--first-color);
+  font-size: 1.6rem;
+  border-radius: 0.8rem;
+  border: none;
+  color: var(--text-color);
+  cursor: pointer;
+  outline: none;
+  padding: 1.1rem 2.7rem;
+  transition: background-color 0.2s ease-in;
+
+  &:hover {
+    background-color: var(--first-color-alt);
+  }
+
+  &:focus {
+    outline: solid var(--first-color-alt);
+  }
+}
+
+.h-cursor-p {
+  cursor: pointer;
+}
+
+.h-font-xxs {
+  font-size: 1.2rem;
+}
+
+.h-font-xs {
+  font-size: 1.6rem;
+}
+
+.h-font-s {
+  font-size: 2.4rem;
+}
+
+.h-font-m {
+  font-size: 3.2rem;
+}
+
+.h-font-l {
+  font-size: 5rem;
+}
+
+.h-font-xl {
+  font-size: 7rem;
+}
+
+.h-font-w-bold {
+  font-weight: bold;
+}
+
+.h-text-align-center {
+  text-align: center;
+}
+
+body::-webkit-scrollbar {
+  width: 0.7em;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);
+  outline: none;
+  border-radius: 0.8rem;
+}

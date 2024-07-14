@@ -1,0 +1,14 @@
+.slide-in-fwd-center {
+  animation: h-slide-in-fwd-center 2s cubic-bezier(.25, .46, .45, .94) both
+}
+
+@keyframes h-slide-in-fwd-center {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1
+  }
+}
