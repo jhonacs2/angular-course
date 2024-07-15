@@ -29,5 +29,20 @@ export const routes: Routes = [
         ]
       }
     ]
+  },
+  {
+    path: 'villains',
+    children: [
+      {
+        path: '',
+        loadComponent: () => import('./components/secure/doom-lair/doom-lair.component')
+          .then(c => c.DoomLairComponent)
+      },
+      {
+        path: ':id',
+        loadComponent: () => import('./components/secure/villains-details/villains-details.component')
+          .then(c => c.VillainsDetailsComponent)
+      }
+    ]
   }
 ];

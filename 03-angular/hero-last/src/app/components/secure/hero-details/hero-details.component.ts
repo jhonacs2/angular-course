@@ -3,7 +3,7 @@ import { CharacterDetails } from '../../../api/response/marvel-data.interface';
 import { MarvelService } from '../../../services/marvel.service';
 import { avengers, selectRandomAvenger } from '../../../utils/select-random-avenger.function';
 import { first } from 'rxjs';
-import { CharactersCarouselComponent } from '../chracters-carousel/characters-carousel.component';
+import { CharactersCarouselComponent } from '../characters-carousel/characters-carousel.component';
 import { LoadingComponent } from '../../shared/loading/loading.component';
 
 @Component({

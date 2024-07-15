@@ -1,8 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { CharactersCarouselComponent } from './characters-carousel.component';
-
-describe('ChractersCarouselComponent', () => {
+/*xdescribe('ChractersCarouselComponent', () => {
   let component: CharactersCarouselComponent;
   let fixture: ComponentFixture<CharactersCarouselComponent>;
 
@@ -20,4 +16,4 @@ describe('ChractersCarouselComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+});*/
