@@ -1,21 +1,21 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { NgClass, NgOptimizedImage } from '@angular/common';
+import { Component, input, InputSignal, OnInit, output } from '@angular/core';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-characters-carousel',
   standalone: true,
   imports: [
     NgClass,
-    NgOptimizedImage
   ],
   templateUrl: './characters-carousel.component.html',
   styleUrl: './characters-carousel.component.scss'
 })
 export class CharactersCarouselComponent implements OnInit {
-  @Input() numberOfItems: number;
-  @Input() itemSelected: number;
+  numberOfItems: InputSignal<number> = input<number>(0);
+  itemSelected: InputSignal<number> = input<number>(0);
 
-  @Output() itemSelectedChange: EventEmitter<number> = new EventEmitter<number>();
+  itemSelectedChange = output<number>();
+
 
   carouselItems: { value: string, selected: boolean }[];
 
@@ -23,19 +23,17 @@ export class CharactersCarouselComponent implements OnInit {
 
   constructor() {
     this.carouselItems = [];
-    this.itemSelected = 0;
-    this.numberOfItems = 0;
     this._indexSelected = 0;
   }
 
   ngOnInit(): void {
-    this.carouselItems = Array.from({ length: this.numberOfItems }, (_, i) => ({
+    this.carouselItems = Array.from({ length: this.numberOfItems() }, (_, i) => ({
       value: (i + 1).toString().padStart(2, '0'),
       selected: false
     }));
 
-    if (this.itemSelected >= 0 && this.itemSelected < this.carouselItems.length) {
-      this._indexSelected = this.itemSelected;
+    if (this.itemSelected() >= 0 && this.itemSelected() < this.carouselItems.length) {
+      this._indexSelected = this.itemSelected();
       this.carouselItems[this._indexSelected].selected = true;
     }
   }
@@ -44,21 +42,21 @@ export class CharactersCarouselComponent implements OnInit {
     this.carouselItems[this._indexSelected].selected = false;
 
     if (direction === 1) {
-      this._indexSelected = (this._indexSelected + 1) % this.numberOfItems;
+      this._indexSelected = (this._indexSelected + 1) % this.numberOfItems();
     }
 
     if (direction === -1) {
-      this._indexSelected = (this._indexSelected - 1 + this.numberOfItems) % this.numberOfItems;
+      this._indexSelected = (this._indexSelected - 1 + this.numberOfItems()) % this.numberOfItems();
     }
 
     this.carouselItems[this._indexSelected].selected = true;
-    this.itemSelectedChange.next(this._indexSelected);
+    this.itemSelectedChange.emit(this._indexSelected);
   }
 
   selectCarouselNumber(i: number): void {
     this.carouselItems[this._indexSelected].selected = false;
     this._indexSelected = i;
     this.carouselItems[i].selected = true;
-    this.itemSelectedChange.next(i);
+    this.itemSelectedChange.emit(i);
   }
 }

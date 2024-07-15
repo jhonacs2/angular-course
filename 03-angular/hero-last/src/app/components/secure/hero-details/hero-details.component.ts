@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CharacterDetails } from '../../../api/response/marvel-data.interface';
 import { MarvelService } from '../../../services/marvel.service';
 import { avengers, selectRandomAvenger } from '../../../utils/select-random-avenger.function';
@@ -16,7 +16,7 @@ import { LoadingComponent } from '../../shared/loading/loading.component';
   templateUrl: './hero-details.component.html',
   styleUrl: './hero-details.component.scss'
 })
-export class HeroDetailsComponent {
+export class HeroDetailsComponent implements OnInit {
   avengerPosition: number;
   characterDetails!: CharacterDetails;
   thumbnail: string;
@@ -46,9 +46,12 @@ export class HeroDetailsComponent {
   private _getCharacterByName(characterName: string): void {
     this._marvelService.getCharacterByName(characterName)
       .pipe(first())
-      .subscribe(characterDetails => {
-        this.characterDetails = characterDetails;
-        this.thumbnail = `${this.characterDetails.thumbnail.path}.${this.characterDetails.thumbnail.extension}`;
-      }, error => console.error('Error fetching character details:', error));
+      .subscribe({
+        next: (characterDetails) => {
+          this.characterDetails = characterDetails;
+          this.thumbnail = `${this.characterDetails.thumbnail.path}.${this.characterDetails.thumbnail.extension}`;
+        },
+        error: (err) => console.error('Error fetching character details', err)
+      });
   }
 }
