@@ -1,0 +1,43 @@
+<article>
+  <div style="display: flex;flex-direction: column;width: fit-content;border: 1px solid red;padding: 1rem">
+    <p>#1</p>
+    <div class="p-float-label">
+      <label for="name">Name</label>
+      <input id="name" type="text" #miHumildeInput (change)="addNumbersArray(miHumildeInput)" autocomplete="off"
+             pInputText>
+    </div>
+
+    <div style="padding: 1rem">
+      <span>{{ simpleName }}</span>
+    </div>
+    <!--<div class="p-float-label">
+      <input id="float-input" type="text" pInputText>
+      <label for="float-input">Username</label>
+    </div>-->
+
+  </div>
+
+  <div style="display: flex;flex-direction: column;width: 200px;border: 1px solid red;padding: 1rem">
+    <p>#2</p>
+    <div>
+      <label for="name2">Name</label>
+      <input id="name2" type="text" #miHumildeInput2>
+    </div>
+
+    <div style="padding: 1rem">
+      <span>{{ viewChildName }}</span>
+    </div>
+  </div>
+
+  <div style="display: flex;flex-direction: column;width: 200px;border: 1px solid red;padding: 1rem">
+    <p>#3</p>
+    <div>
+      <label for="name3">Name</label>
+      <!--      <input id="name3" type="text" [(ngModel)]="modelName">-->
+    </div>
+
+    <div style="padding: 1rem">
+      <span>{{ modelName }}</span>
+    </div>
+  </div>
+</article>

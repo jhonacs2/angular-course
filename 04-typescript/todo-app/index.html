@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body>
+  <main class="app">
+    <!-- App heading -->
+    <div class="app__heading heading">
+      <h1 class="heading__title">
+        <strong>Todo list with TypeScript</strong>
+      </h1>
+    </div>
+
+    <!-- Todo app -->
+    <div class="app__todo content">
+      <!-- Area for user input the data -->
+      <div class="content__input">
+        <button title="Mark all as done" class="fa fa-check btn btn--default" id="made-done"></button>
+        <input id="task-input" type="text" placeholder="What will you focus on today?" />
+      </div>
+
+      <!-- Area for show the data -->
+      <div class="content__data">
+        <!-- Template for a task is check status -->
+        <div class="content__data__item item">
+          <button
+                  data-task-id="1234"
+                  data-action="Mark"
+                  title="Mark as done"
+                  class="btn btn--default fa data--check"
+          ></button>
+          <p class="item__title checked">Lorem ipsum dolor sit amet.</p>
+          <input class="edit" type="text" value="Lorem ipsum dolor sit amet." />
+          <button
+                  class="fa fa-times btn btn--remove"
+                  data-task-id="1234"
+                  data-action="Remove"
+                  title="Remove this task"
+          ></button>
+        </div>
+
+        <!-- Template for a task is no check status -->
+        <div class="content__data__item item">
+          <button
+                  data-task-id="1234"
+                  data-action="Mark"
+                  title="Mark as done"
+                  class="btn btn--default fa data--no-check"
+          ></button>
+          <p class="item__title">Lorem ipsum dolor sit amet.</p>
+          <button
+                  class="fa fa-times btn btn--remove"
+                  data-task-id="1234"
+                  data-action="Remove"
+                  title="Remove this task"
+          ></button>
+        </div>
+      </div>
+
+      <!-- Area for user's actions -->
+      <div class="content__actions">
+        <p class="total-items">5 items left</p>
+
+        <ul class="tasks__filters">
+          <li>
+            <a data-action="all" href="#/">All</a>
+          </li>
+          <li>
+            <a data-action="active" href="#/active">Active</a>
+          </li>
+          <li>
+            <a data-action="completed" href="#/completed">Completed</a>
+          </li>
+        </ul>
+
+        <div class="task-clear-completed">
+          <button class="clear-completed btn btn--default">Clear completed</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Loading area -->
+    <div class="app__loading loading">
+      <div class="preloader">
+        <div class="preloader__absolute">
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+          <div class="preloader__item"></div>
+        </div>
+        <p class="preloader__processing">Loading...</p>
+      </div>
+    </div>
+
+    <!-- Notification for app -->
+    <div class="app__notification notification">
+      <div class="alert notification__content">
+          <span class="notification__description"
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, excepturi?</span
+          >
+        <span class="notification__actions dismiss">
+            <i class="fa fa-close"></i>
+          </span>
+      </div>
+    </div>
+
+    <!-- Confirmation -->
+    <div class="app__confirmation confirmation d-none">
+      <div class="confirmation__content">
+        <div class="confirmation__content__heading confirmation__heading">
+          <p class="confirmation__heading__title">Confirm</p>
+          <p class="confirmation__heading__description">
+            Are you sure? This action will be to remove this item and can't undo it!
+          </p>
+        </div>
+        <div class="confirmation__content__actions">
+          <button id="confirmationCancel" class="btn btn--cancel">Cancel</button>
+          <button id="confirmationYes" class="btn btn--yes">Yes</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
