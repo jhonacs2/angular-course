@@ -5,6 +5,8 @@ import { HouseComponent } from '../components/house/house.component';
 import { RequestsComponent } from '../components/requests/requests.component';
 import { DirectiveExampleComponent } from '../components/directive-example/directive-example.component';
 import { PipesExampleComponent } from '../components/pipes-example/pipes-example.component';
+import { FormsComponent } from '../components/forms/forms.component';
+import { ComplexFormComponent } from '../components/complex-form/complex-form.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,12 @@ const routes: Routes = [
   },
   {
     path: 'pipes', component: PipesExampleComponent
+  },
+  {
+    path: 'forms', component: FormsComponent
+  },
+  {
+    path: 'forms-c', component: ComplexFormComponent
   },
   {
     path: '',

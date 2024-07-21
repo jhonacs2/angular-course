@@ -14,6 +14,7 @@ export class PipesExampleComponent implements OnInit {
   public numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   public lastname: string;
   public loremIpsum: string;
+  public date: Date = new Date();
 
   constructor() {
     this.lastname = 'Cesar';
@@ -30,7 +31,7 @@ export class PipesExampleComponent implements OnInit {
 
   updateNumbers(): void {
     this.numbers.push(this.numbers.length + 1);
-    console.log(this.numbers)
+    console.log(this.numbers);
   }
 
   mouseEnterInputText() {

@@ -27,6 +27,11 @@
   </div>
 
   <div style="border: 1px solid red">
+    <p>Double Pipe</p>
+    <span>{{ date | date:'fullDate' | uppercase }}</span>
+  </div>
+
+  <div style="border: 1px solid red">
     <p>My Custom Pipe</p>
     <span>{{ loremIpsum | truncate:200 }}</span>
   </div>

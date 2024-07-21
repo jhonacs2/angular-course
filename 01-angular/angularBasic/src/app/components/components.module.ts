@@ -10,6 +10,10 @@ import { HouseComponent } from './house/house.component';
 import { RequestsComponent } from './requests/requests.component';
 import { DirectiveExampleComponent } from './directive-example/directive-example.component';
 import { DirectivesModule } from '../directives/directives.module';
+import { FormsComponent } from './forms/forms.component';
+import { FormsModule } from '@angular/forms';
+import { ComplexFormComponent } from './complex-form/complex-form.component';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
@@ -22,6 +26,8 @@ import { DirectivesModule } from '../directives/directives.module';
     HouseComponent,
     RequestsComponent,
     DirectiveExampleComponent,
+    FormsComponent,
+    ComplexFormComponent
   ],
   exports: [
     BasicComponent,
@@ -36,7 +42,9 @@ import { DirectivesModule } from '../directives/directives.module';
   imports: [
     CommonModule,
     PipesModule,
-    DirectivesModule
+    DirectivesModule,
+    InputTextModule,
+    FormsModule,
   ]
 })
 export class ComponentsModule {
