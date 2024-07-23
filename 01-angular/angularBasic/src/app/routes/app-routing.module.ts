@@ -43,20 +43,3 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 }
-
-
-// {
-//   path: 'basic', component: BasicComponent
-// },
-// {
-//   path: 'component-communication', component: HouseComponent
-// },
-// {
-//   path: 'request', component: RequestsComponent
-// },
-// {
-//   path: 'directives', component: DirectiveExampleComponent
-// },
-// {
-//   path: 'pipes', component: PipesExampleComponent
-// },
