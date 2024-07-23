@@ -60,6 +60,13 @@
         flex-direction: column;
         align-items: center;
         gap: 2.4rem;
+
+        .sing-up {
+          bottom: -14%;
+          color: var(--text-color-alt);
+          position: absolute;
+          text-decoration: underline;
+        }
       }
     }
   }

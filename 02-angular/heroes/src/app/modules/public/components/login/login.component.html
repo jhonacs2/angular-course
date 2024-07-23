@@ -10,14 +10,16 @@
 
       <div class="input-container p-relative">
         <div class="w70">
-          <input class="h-input" type="text" id="email" placeholder="Email">
+          <input class="h-input" type="text" id="username" placeholder="username" #username>
         </div>
 
         <div class="w70">
-          <input class="h-input" type="password" id="password" placeholder="Password">
+          <input class="h-input" type="password" id="password" placeholder="Password" #password>
         </div>
 
-        <button class="h-button w70">Login</button>
+        <a class="sing-up h-font-w-bold h-font-xs" routerLink="./register">Sign Up</a>
+
+        <button class="h-button w70" (click)="login(username,password)">Login</button>
       </div>
     </div>
   </section>
