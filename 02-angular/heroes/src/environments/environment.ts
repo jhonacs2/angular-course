@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apikey: 'ADD_PUBLIC_API_KEY',
-  hash: 'ADD_HASH',
+  apikey: 'd96c5205788ea5a31962b37dc646ff3e',
+  hash: 'd4cbb63b0b8c502306a1f0d63e6701bb',
   ts: 1
 };
 

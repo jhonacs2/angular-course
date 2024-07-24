@@ -6,7 +6,11 @@ import { LeavePageGuard } from '../../../guards/leave-page.guard';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'register', component: RegisterComponent, canDeactivate: [LeavePageGuard] }
+  {
+    path: 'register',
+    component: RegisterComponent,
+    canDeactivate: [LeavePageGuard]
+  }
 ];
 
 @NgModule({
