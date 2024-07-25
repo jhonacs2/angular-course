@@ -1,0 +1,9 @@
+.father-container {
+  background-color: #1976d2;
+  width: 300px;
+  height: 300px;
+}
+
+:host ::ng-deep h2 {
+  color: red;
+}
