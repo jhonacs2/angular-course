@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-first-library';
+  lorem: string;
+
+  constructor() {
+    this.lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem explicabo in';
+  }
 }

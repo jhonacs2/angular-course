@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "ds-ui-core:build": "ng build ds-ui-core && xcopy /S/E/-Y projects\\ds-ui-core\\src\\assets dist\\ds-ui-core\\assets\\",
+    "ds-ui-core:package": "npm run ds-ui-core:build & npm pack dist\\ds-ui-core"
   },
   "private": true,
   "dependencies": {

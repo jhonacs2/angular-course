@@ -6,9 +6,8 @@
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "ds-ui-core": [
-        "dist/ds-ui-core/ds-ui-core",
-        "dist/ds-ui-core"
+      "@ds/ui-core": [
+        "./projects/ds-ui-core/src/public-api.ts"
       ]
     },
     "strict": true,

@@ -28,7 +28,12 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/ds-ui-core/src/assets/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "src/styles.scss"
@@ -110,7 +115,12 @@
       "projectType": "library",
       "root": "projects/ds-ui-core",
       "sourceRoot": "projects/ds-ui-core/src",
-      "prefix": "lib",
+      "prefix": "ds",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DsUiCoreModule } from '../../projects/ds-ui-core/src/lib/ds-ui-core.module';
+import { ComponentsModule, DsUiCoreModule, PipesModule } from '@ds/ui-core';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,9 @@ import { DsUiCoreModule } from '../../projects/ds-ui-core/src/lib/ds-ui-core.mod
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DsUiCoreModule
+    DsUiCoreModule,
+    PipesModule,
+    ComponentsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

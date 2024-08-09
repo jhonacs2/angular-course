@@ -1,14 +1,9 @@
 import { NgModule } from '@angular/core';
-import { DsUiCoreComponent } from './ds-ui-core.component';
 
 @NgModule({
-  declarations: [
-    DsUiCoreComponent
-  ],
+  declarations: [],
   imports: [],
-  exports: [
-    DsUiCoreComponent
-  ]
+  exports: []
 })
 export class DsUiCoreModule {
 }
