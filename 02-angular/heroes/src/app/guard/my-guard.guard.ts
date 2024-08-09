@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class MyGuardsGuard implements CanDeactivate<unknown> {
+export class MyGuardGuard implements CanDeactivate<unknown> {
   canDeactivate(
     component: unknown,
     currentRoute: ActivatedRouteSnapshot,
@@ -13,5 +13,4 @@ export class MyGuardsGuard implements CanDeactivate<unknown> {
     nextState?: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     return true;
   }
-  
 }

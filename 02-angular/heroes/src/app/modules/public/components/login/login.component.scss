@@ -61,6 +61,11 @@
         align-items: center;
         gap: 2.4rem;
 
+        .h-button{
+          padding: 1rem;
+          width: 100%;
+        }
+
         .sing-up {
           bottom: -14%;
           color: var(--text-color-alt);
