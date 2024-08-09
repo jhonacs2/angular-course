@@ -1,0 +1,24 @@
+{
+  "package": "@ds/ui-core",
+  "library": "ds-ui-core",
+  "module": "ds.ui-core",
+  "folder": {
+    "project": {
+      "path": "./projects/ds-ui-core",
+      "assets": {
+        "scss": "./projects/ds-ui-core/src/assets",
+        "images": "./projects/ds-ui-core/src/assets/images"
+      }
+    },
+    "target": {
+      "css": "./target/ds-ui-core/css",
+      "distCss": "./target/ds-ui-core/dist-css"
+    },
+    "dist": {
+      "library": {
+        "styles": "./dist/ds-ui-core/assets/styles",
+        "images": "./dist/ds-ui-core/assets/images"
+      }
+    }
+  }
+}

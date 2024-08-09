@@ -1,6 +1,6 @@
 {
   "name": "@ds/ui-core",
-  "version": "0.0.1-test4",
+  "version": "0.0.1-test78",
   "peerDependencies": {
     "@angular/common": "^12.2.0",
     "@angular/core": "^12.2.0"

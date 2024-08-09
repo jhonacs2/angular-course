@@ -36,7 +36,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "projects/ds-ui-core/src/assets/ds-styles.scss"
             ],
             "scripts": []
           },
