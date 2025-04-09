@@ -1,1 +1,8 @@
-<p>input-todo works!</p>
+<div class="bg-blue-100 p-4 border border-blue-500 rounded-md">
+  <h3 class="text-lg font-semibold text-blue-700 mb-2">Componente OnPush</h3>
+  <p class="text-blue-900">Nombre: {{ user?.name }}</p>
+  <p class="text-blue-900">Edad: {{ user?.age }}</p>
+  <p class="text-sm text-gray-600 mt-2">Estado del contador: {{ counter }}</p>
+  <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-2" (click)="incrementCounter()">Incrementar Contador (Local)</button>
+  <p class="text-sm text-gray-600 mt-2">Último cambio detectado: {{ lastChange }}</p>
+</div>
