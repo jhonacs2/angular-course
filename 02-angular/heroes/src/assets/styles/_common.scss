@@ -1,3 +1,5 @@
+@use "testStyles/index" as global;
+
 /*CONTAINER*/
 .container {
   margin-left: auto;
@@ -52,7 +54,7 @@
 }
 
 .h-button {
-  background-color: var(--first-color);
+  background-color: global.$primary-color;
   font-size: 1.6rem;
   border-radius: 0.8rem;
   border: none;

@@ -23,3 +23,11 @@
     <app-loading></app-loading>
   }
 </article>
+@defer (when true){
+  <app-characters-carousel
+    class="hero-carousel"
+    [numberOfItems]="numberOfAvenger"
+    [itemSelected]="avengerPosition"
+    (itemSelectedChange)="itemSelectedChange($event)">
+  </app-characters-carousel>
+}

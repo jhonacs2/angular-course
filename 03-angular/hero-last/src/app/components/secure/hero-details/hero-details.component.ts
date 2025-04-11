@@ -11,7 +11,7 @@ import { LoadingComponent } from '../../shared/loading/loading.component';
   standalone: true,
   imports: [
     CharactersCarouselComponent,
-    LoadingComponent
+    LoadingComponent,
   ],
   templateUrl: './hero-details.component.html',
   styleUrl: './hero-details.component.scss'
