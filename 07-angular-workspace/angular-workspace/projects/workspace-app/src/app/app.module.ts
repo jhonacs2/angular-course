@@ -7,6 +7,8 @@ import { InputTodoComponent } from './components/input-todo/input-todo.component
 import { ParentViewComponent } from './components/parent-view/parent-view.component';
 import { ChildViewComponent } from './components/child-view/child-view.component';
 import { GranpaViewComponent } from './components/granpa-view/granpa-view.component';
+import { BodyProfileComponent } from './components/body-profile/body-profile.component';
+import { AvatarProfileComponent } from './components/avatar-profile/avatar-profile.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { GranpaViewComponent } from './components/granpa-view/granpa-view.compon
     InputTodoComponent,
     ParentViewComponent,
     ChildViewComponent,
-    GranpaViewComponent
+    GranpaViewComponent,
+    BodyProfileComponent,
+    AvatarProfileComponent
   ],
   imports: [
     BrowserModule,

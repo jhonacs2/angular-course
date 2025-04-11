@@ -9,7 +9,17 @@ import {User} from './interfaces/user.interface';
 })
 export class AppComponent {
   title = 'workspace-app';
-  currentUser: User = {name: 'Jhonatan', age: 28};
+  currentUser: User = {
+    name: 'Jhonatan',
+    age: 28,
+    picture: 'https://i.pinimg.com/736x/d6/c2/cb/d6c2cbe5cfa39508e8dc514864fdd4fc.jpg'
+  };
+
+  secondaryUser: User = {
+    name: 'Diego',
+    age: 25,
+    picture: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbVNyDx6q4SJyNq-iXKqzrUtYa3Si5178WPA&s'
+  };
   parentCounter: number = 0;
 
   constructor(private _cdr: ChangeDetectorRef) {

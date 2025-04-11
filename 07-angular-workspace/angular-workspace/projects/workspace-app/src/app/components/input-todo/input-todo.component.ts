@@ -1,5 +1,6 @@
-import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {User} from '../../interfaces/user.interface';
+import {ProfileService} from '../../services/profile.service';
 
 @Component({
   selector: 'ad-input-todo',
@@ -7,12 +8,20 @@ import {User} from '../../interfaces/user.interface';
   styleUrls: ['./input-todo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class InputTodoComponent implements OnChanges {
+export class InputTodoComponent implements OnInit, OnChanges {
   @Input() user: User | null = null;
   @Input() externalCounter: number = 0;
 
   counter: number = 0;
   lastChange: string = 'Inicial';
+
+  constructor(private _profileService: ProfileService) {
+  }
+
+  ngOnInit(): void {
+    this._profileService.fullName = this.user?.name ?? '';
+    this._profileService.profilePic = this.user?.picture ?? '';
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['user']) {
