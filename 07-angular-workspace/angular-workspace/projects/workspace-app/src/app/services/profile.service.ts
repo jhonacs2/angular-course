@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProfileService {
   private _fullName: string;
   private _profilePic: string;
@@ -10,6 +8,7 @@ export class ProfileService {
   constructor() {
     this._fullName = '';
     this._profilePic = '';
+    console.log('new Service')
   }
 
   get fullName(): string {

@@ -6,7 +6,8 @@ import {ProfileService} from '../../services/profile.service';
   selector: 'ad-input-todo',
   templateUrl: './input-todo.component.html',
   styleUrls: ['./input-todo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [ProfileService]
 })
 export class InputTodoComponent implements OnInit, OnChanges {
   @Input() user: User | null = null;
