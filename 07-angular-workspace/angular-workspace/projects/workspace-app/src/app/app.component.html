@@ -1,13 +1,1 @@
-<main class="p-4">
-  <h2 class="text-xl font-semibold mb-4">Componente Padre</h2>
-  <div class="mt-4">
-    <button class="bg-blue-500 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded mr-2" (click)="changeUserObject()">Cambiar Objeto Usuario</button>
-    <button class="bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-4 rounded mr-2" (click)="updateUserProperty()">Actualizar Propiedad Usuario</button>
-    <button class="bg-indigo-500 hover:bg-indigo-700 text-black font-bold py-2 px-4 rounded" (click)="incrementParentCounter()">Incrementar Contador Padre</button>
-  </div>
-
-  <ad-input-todo [user]="currentUser" [externalCounter]="parentCounter"></ad-input-todo>
-  <ad-input-todo [user]="secondaryUser" [externalCounter]="parentCounter"></ad-input-todo>
-</main>
-
-<ad-granpa-view></ad-granpa-view>
+<router-outlet></router-outlet>
