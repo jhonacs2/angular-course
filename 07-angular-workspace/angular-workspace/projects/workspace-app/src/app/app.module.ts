@@ -9,6 +9,7 @@ import {ChildViewComponent} from './components/child-view/child-view.component';
 import {GranpaViewComponent} from './components/granpa-view/granpa-view.component';
 import {BodyProfileComponent} from './components/body-profile/body-profile.component';
 import {AvatarProfileComponent} from './components/avatar-profile/avatar-profile.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import {AvatarProfileComponent} from './components/avatar-profile/avatar-profile
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
