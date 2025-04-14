@@ -1,8 +1,6 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {RickAndMortyService} from '../../services/rick-and-morty.service';
-import {map} from 'rxjs/operators';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {Result} from '../../interfaces/character-request.interface';
-import {Observable} from 'rxjs';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'ad-series-view',
@@ -14,12 +12,16 @@ import {Observable} from 'rxjs';
   }
 })
 export class SeriesViewComponent implements OnInit {
-  characters$ = new Observable<Result[]>();
+  characters: Result[] = [];
 
-  constructor(private _rickAndMortyService: RickAndMortyService) {
+  constructor(private _activatedRoute: ActivatedRoute, private _cdr: ChangeDetectorRef) {
   }
 
   ngOnInit(): void {
-    this.characters$ = this._rickAndMortyService.getCharacters().pipe(map(characters => characters.results));
+    this._activatedRoute.data.subscribe(response => {
+      this.characters = response.characters;
+      console.log(this.characters)
+    });
+    // this.characters$ = this._rickAndMortyService.getCharacters().pipe(map(characters => characters.results));
   }
 }

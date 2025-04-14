@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, ViewChild, ViewContainerRef} from '@angular/core';
 import {BoardService} from './services/board.service';
 
 @Component({
@@ -8,14 +8,10 @@ import {BoardService} from './services/board.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent {
+  @ViewChild('appTemplate', {read: ViewContainerRef, static: true}) viewContainerRef!: ViewContainerRef;
+
   title = 'workspace-app';
 
-  constructor(private _board: BoardService) {
-    if (this._board.board) {
-      console.log(this._board.board, 'ya existe');
-    } else {
-      console.log('seteando');
-      this._board.board = 'jhona';
-    }
+  constructor() {
   }
 }
