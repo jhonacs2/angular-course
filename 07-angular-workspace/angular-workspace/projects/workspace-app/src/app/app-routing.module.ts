@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'series',
     loadChildren: () => import('./components/series-view/series.module').then(m => m.SeriesModule)
+  },
+  {
+    path: 'library',
+    loadChildren: () => import('./components/library-view/library.module').then(m => m.LibraryModule)
   }
 ];
 
