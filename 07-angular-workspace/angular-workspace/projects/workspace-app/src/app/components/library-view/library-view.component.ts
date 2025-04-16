@@ -7,8 +7,10 @@ import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LibraryViewComponent implements OnInit {
+  pdfUrl: string;
 
   constructor() {
+    this.pdfUrl = 'assets/pdf/dummy.pdf';
   }
 
   ngOnInit(): void {

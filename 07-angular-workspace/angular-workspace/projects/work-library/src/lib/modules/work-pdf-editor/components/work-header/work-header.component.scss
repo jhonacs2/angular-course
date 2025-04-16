@@ -1,0 +1,22 @@
+.editor-header {
+  padding: 2rem 1rem;
+  border-bottom: 1px solid #eaeaea;
+  background-color: #ffffff;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+    color: #2d2d2d;
+    font-family: 'Inter', sans-serif;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #7a7a7a;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+  }
+}

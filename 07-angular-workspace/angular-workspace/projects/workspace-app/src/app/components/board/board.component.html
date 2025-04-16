@@ -1,37 +1,9 @@
 <div class="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 board">
-  <div class="absolute w-56 h-48 bg-white rounded-lg shadow-md p-4 cursor-grab"
-       style="top: 20px; left: 20px;" cdkDragBoundary=".example-boundary" cdkDrag>
+  <lib-card cdkDragBoundary=".example-boundary" cdkDrag style="top: 20px; left: 20px;">
     <h2 class="text-lg font-semibold mb-1">Card 1</h2>
     <p class="text-gray-700 text-sm">Contenido de la primera tarjeta.</p>
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-2 rounded mt-2 text-xs">
       Acción
     </button>
-  </div>
-  <div class="absolute w-56 h-48 bg-white rounded-lg shadow-md p-4 cursor-grab" cdkDragBoundary=".example-boundary" cdkDrag style="top: 20px; right: 20px;">
-    <h2 class="text-lg font-semibold mb-1">Card 2</h2>
-    <p class="text-gray-700 text-sm">Contenido de la segunda tarjeta.</p>
-    <ul class="list-disc list-inside mt-2 text-xs text-gray-600">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
-  </div>
-  <div class="absolute w-56 h-48 bg-white rounded-lg shadow-md p-4 cursor-grab" cdkDragBoundary=".example-boundary" cdkDrag style="left: 60px;position: absolute">
-    <h2 class="text-lg font-semibold mb-1">Card 3</h2>
-    <img src="https://i.pinimg.com/236x/e4/e4/3f/e4e43fdab5576390d7f1f97d2df518a2.jpg" alt="Imagen de ejemplo" class="rounded-md mb-2 h-20 object-cover w-full">
-    <p class="text-gray-700 text-xs">Imagen de ejemplo.</p>
-  </div>
-  <div class="absolute w-56 h-48 bg-white rounded-lg shadow-md p-4 cursor-grab" cdkDragBoundary=".example-boundary" cdkDrag style="right: 50px;">
-    <h2 class="text-lg font-semibold mb-1">Card 4</h2>
-    <p class="text-gray-700 text-sm">La cuarta tarjeta.</p>
-    <div class="flex items-center mt-2">
-      <svg class="w-4 h-4 text-green-500 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-      </svg>
-      <span class="text-green-500 font-semibold text-xs">Listo</span>
-    </div>
-  </div>
+  </lib-card>
 </div>
-
-<lib-card></lib-card>

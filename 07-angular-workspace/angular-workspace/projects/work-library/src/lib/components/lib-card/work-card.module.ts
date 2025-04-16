@@ -3,6 +3,7 @@ import {CardComponent} from './card.component';
 
 @NgModule({
   declarations: [CardComponent],
+  imports: [],
   exports: [CardComponent]
 })
 export class WorkCardModule {

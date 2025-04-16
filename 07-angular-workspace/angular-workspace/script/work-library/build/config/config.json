@@ -1,0 +1,24 @@
+{
+  "package": "@work/library",
+  "library": "work-library",
+  "module": "work.library",
+  "folder": {
+    "project": {
+      "path": "./projects/work-library",
+      "assets": {
+        "scss": "./projects/work-library/src/assets",
+        "images": "./projects/work-library/src/assets/images"
+      }
+    },
+    "target": {
+      "css": "./target/work-library/css",
+      "distCss": "./target/work-library/dist-css"
+    },
+    "dist": {
+      "library": {
+        "styles": "./dist/work-library/assets/styles",
+        "images": "./dist/work-library/assets/images"
+      }
+    }
+  }
+}
