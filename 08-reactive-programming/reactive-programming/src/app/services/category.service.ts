@@ -11,7 +11,7 @@ export class CategoryService {
 
   getCategories() {
     return from(this._supabaseService.supabase
-      .from('posts')
+      .from('categories')
       .select('*'));
   }
 }

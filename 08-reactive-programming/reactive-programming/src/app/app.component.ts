@@ -1,5 +1,4 @@
-import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {CategoryService} from './services/category.service';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +6,6 @@ import {CategoryService} from './services/category.service';
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'reactive-programming';
-
-  constructor(private _categoryService: CategoryService) {
-  }
-
-  ngOnInit(): void {
-    this._categoryService.getCategories().subscribe((response) => {
-      console.log(response);
-    });
-  }
 }

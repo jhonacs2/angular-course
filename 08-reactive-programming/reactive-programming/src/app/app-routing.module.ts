@@ -1,10 +1,22 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {PostComponent} from './pages/post/post.component';
+import {ReactivePostsComponent} from './pages/reactive-posts/reactive-posts.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path: '',
+    component: PostComponent
+  },
+  {
+    path: 'reactive',
+    component: ReactivePostsComponent
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}
