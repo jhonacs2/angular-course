@@ -1,0 +1,28 @@
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .post-list__item {
+    margin-bottom: 10px;
+
+    .post-list__button {
+      background-color: #f1f0f0;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #51abff;
+      }
+
+      &.active {
+        background-color: #51abff;
+      }
+    }
+  }
+}

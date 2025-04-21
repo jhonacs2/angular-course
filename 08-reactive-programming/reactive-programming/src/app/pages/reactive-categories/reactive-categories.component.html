@@ -1,0 +1,18 @@
+<ul class="post-list" style="width: 50%">
+  <li class="post-list__item" *ngFor="let post of posts$ | async">
+    <button class="post-list__button"
+            type="button"
+            [class.active]="(postSelected$|async)?.id === post.id"
+            (click)="selectPost(post)">
+      ({{ post.categoryName }}) {{ post.title }}
+    </button>
+  </li>
+</ul>
+
+<div style="width: 50%">
+  <ng-container *ngIf="(postSelected$ | async) as postSelected">
+    <div>{{ postSelected.title }}</div>
+    <div>{{ postSelected.categoryName }}</div>
+    <div>{{ postSelected.description }}</div>
+  </ng-container>
+</div>

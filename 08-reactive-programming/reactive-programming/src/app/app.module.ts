@@ -5,12 +5,14 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {PostComponent} from './pages/post/post.component';
 import {ReactivePostsComponent} from './pages/reactive-posts/reactive-posts.component';
+import { ReactiveCategoriesComponent } from './pages/reactive-categories/reactive-categories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
-    ReactivePostsComponent
+    ReactivePostsComponent,
+    ReactiveCategoriesComponent
   ],
   imports: [
     BrowserModule,

@@ -17,3 +17,11 @@ export interface ICategoryResponse {
   id: number;
   title: string;
 }
+
+export interface IPost {
+  id: number;
+  description: string;
+  title: string;
+  category_id: number;
+  categoryName?: string;
+}

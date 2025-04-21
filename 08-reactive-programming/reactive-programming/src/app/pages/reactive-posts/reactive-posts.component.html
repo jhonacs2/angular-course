@@ -1,1 +1,27 @@
-<p>reactive-posts works!</p>
+<div>
+  <select (change)="categoryChange(category)" #category>
+  <option value="">Select Category</option>
+  <option *ngFor="let category of categories$ | async" [value]="category.id">
+    {{ category.title }}
+  </option>
+  </select>
+</div>
+
+<table>
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Category</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let post of filteredPosts$ | async">
+    <td>{{ post.id }}</td>
+    <td>{{ post.title }}</td>
+    <td>{{ post.description }}</td>
+    <td>{{ post.category_id }}</td>
+  </tr>
+  </tbody>
+</table>
