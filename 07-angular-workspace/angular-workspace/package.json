@@ -24,6 +24,7 @@
     "@angular/router": "~12.2.0",
     "@editorjs/editorjs": "2.19.2",
     "@ngrx/effects": "^12.5.1",
+    "@ngrx/entity": "^12.5.1",
     "@ngrx/store": "^12.5.1",
     "@ngrx/store-devtools": "^12.5.1",
     "rxjs": "~6.6.0",

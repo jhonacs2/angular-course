@@ -1,23 +1,30 @@
 import {createFeatureSelector, createSelector} from '@ngrx/store';
 import * as fromTodos from './reducer';
 import * as fromApp from '../../store';
+import * as todoEntity from './entities/todo.entities';
 
 export const selectTodoState = createFeatureSelector<
-  fromApp.State,
-  fromTodos.State
+    fromApp.State,
+    fromTodos.State
 >('todos');
 
+const {
+    selectAll,
+} = todoEntity.adapter.getSelectors();
+
+
 export const selectAllTodos = createSelector(
-  selectTodoState,
-  (state) => state.data
+    selectTodoState, state => selectAll(state.data)
 );
+
 
 export const selectLoading = createSelector(
-  selectTodoState,
-  (state) => state.loading
+    selectTodoState,
+    (state) => state.loading
 );
 
+
 export const selectUndoneTodosCount = createSelector(
-  selectTodoState,
-  (state) => state.data.filter(t => !t.completed).length
+    selectAll,
+    (todos) => todos.filter(t => !t.completed).length
 );
