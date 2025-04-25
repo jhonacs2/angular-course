@@ -1,15 +1,18 @@
-<li>
-  <div class="view">
-    <input
-      class="toggle"
-      type="checkbox"
-    />
-    <label>
-    </label>
-    <button class="destroy"></button>
-  </div>
-  <input
-    class="edit"
-    type="text"
-    #textInput/>
+<li *ngIf="todo as todo"
+    [class.completed]="todo.completed"
+    [class.editing]="editing">
+    <div class="view">
+        <input class="toggle"
+               type="checkbox"
+               [checked]="todo.completed"/>
+        <label>
+            {{ todo.text }}
+        </label>
+        <button class="destroy"></button>
+    </div>
+    <input class="edit"
+           type="text"
+           #textInput
+           [hidden]="editing"
+           [value]="todo.text"/>
 </li>

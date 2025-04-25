@@ -1,6 +1,8 @@
-<section id="main" class="main">
-  <div class="toogle-view"></div>
-  <ul id="todo-list" class="todo-list">
-    <app-todo-list-item></app-todo-list-item>
-  </ul>
+<section id="main" class="main" *ngIf="todos as todos">
+    <div class="toogle-view" *ngIf="todos.length > 0"></div>
+    <ul id="todo-list" class="todo-list">
+        <app-todo-list-item *ngFor="let todo of todos;"
+                            [todo]="todo">
+        </app-todo-list-item>
+    </ul>
 </section>
