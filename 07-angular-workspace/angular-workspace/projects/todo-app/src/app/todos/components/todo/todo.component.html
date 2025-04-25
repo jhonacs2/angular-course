@@ -1,7 +1,6 @@
 <header class="header">
-  <h1>todos</h1>
-  <app-new-todo
-  ></app-new-todo>
+    <h1>todos</h1>
+    <app-new-todo (addTodo)="addTodo($event)"></app-new-todo>
 </header>
 <app-todo-list [todos]="todos$ | async"></app-todo-list>
 

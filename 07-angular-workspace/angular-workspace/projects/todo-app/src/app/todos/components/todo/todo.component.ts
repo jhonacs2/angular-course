@@ -17,4 +17,7 @@ export class TodoComponent implements OnInit {
         this._todoFacadeService.loadTodos();
     }
 
+    addTodo(todo: string): void {
+        this._todoFacadeService.addTodo(todo);
+    }
 }

@@ -6,18 +6,22 @@ import {Observable} from 'rxjs';
 import {ITodo} from '../models';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class TodoFacadeService {
 
-  constructor(private store: Store<fromApp.State>) {
-  }
+    constructor(private store: Store<fromApp.State>) {
+    }
 
-  getTodos(): Observable<ITodo[]> {
-    return this.store.select(fromTodos.selectAllTodos);
-  }
+    getTodos(): Observable<ITodo[]> {
+        return this.store.select(fromTodos.selectAllTodos);
+    }
 
-  loadTodos(): void {
-    this.store.dispatch(fromTodos.loadAction());
-  }
+    loadTodos(): void {
+        this.store.dispatch(fromTodos.loadAction());
+    }
+
+    addTodo(text: string): void {
+        this.store.dispatch(fromTodos.addAction(text));
+    }
 }
