@@ -246,6 +246,110 @@
           }
         }
       }
+    },
+    "task-manager": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        },
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
+      "root": "projects/task-manager",
+      "sourceRoot": "projects/task-manager/src",
+      "prefix": "tm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/task-manager",
+            "index": "projects/task-manager/src/index.html",
+            "main": "projects/task-manager/src/main.ts",
+            "polyfills": "projects/task-manager/src/polyfills.ts",
+            "tsConfig": "projects/task-manager/tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/task-manager/src/favicon.ico",
+              "projects/task-manager/src/assets"
+            ],
+            "styles": [
+              "projects/task-manager/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "projects/task-manager/src/environments/environment.ts",
+                  "with": "projects/task-manager/src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "browserTarget": "task-manager:build:production"
+            },
+            "development": {
+              "browserTarget": "task-manager:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "task-manager:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/task-manager/src/test.ts",
+            "polyfills": "projects/task-manager/src/polyfills.ts",
+            "tsConfig": "projects/task-manager/tsconfig.spec.json",
+            "karmaConfig": "projects/task-manager/karma.conf.js",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              "projects/task-manager/src/favicon.ico",
+              "projects/task-manager/src/assets"
+            ],
+            "styles": [
+              "projects/task-manager/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        }
+      }
     }
   },
   "defaultProject": "workspace-app"

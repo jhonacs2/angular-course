@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "start-todo": "ng serve --project todo-app",
+    "start-task": "ng serve --project task-manager",
     "build": "ng build",
     "work-library-g:build": "node script/build-version/prebuild.js & gulp work-lib",
     "work-library:build": "ng build work-library && xcopy /S/E/-Y projects\\work-library\\src\\assets dist\\work-library\\assets\\",

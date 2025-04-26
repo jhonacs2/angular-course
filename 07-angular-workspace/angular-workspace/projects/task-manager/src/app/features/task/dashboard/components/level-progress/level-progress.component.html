@@ -1,0 +1,9 @@
+<div class="flex justify-between mb-2">
+  <span>Level <span>{{ level }}</span></span>
+  <span>XP: <span>{{ exp }}</span>/100</span>
+</div>
+<div class="w-full bg-gray-700 rounded-full h-2">
+  <div id="xpBar"
+       class="bg-gradient-to-r from-purple-500 to-pink-500 rounded-full h-2 transition-all duration-300"
+       [style.width]="progress"></div>
+</div>
