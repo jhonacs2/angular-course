@@ -6,6 +6,9 @@ import {LevelProgressComponent} from './components/level-progress/level-progress
 import {CoinsComponent} from './components/coins/coins.component';
 import {CharacterService} from './services/character.service';
 import {CommonModule} from '@angular/common';
+import {ActivityCardComponent} from './components/activity-card/activity-card.component';
+import {ActivityService} from './services/activity.service';
+import { DashboardModalComponent } from './components/dashboard-modal/dashboard-modal.component';
 
 
 @NgModule({
@@ -13,13 +16,18 @@ import {CommonModule} from '@angular/common';
     DashboardComponent,
     TaskCardComponent,
     LevelProgressComponent,
-    CoinsComponent
+    CoinsComponent,
+    ActivityCardComponent,
+    DashboardModalComponent
   ],
   imports: [
     DashboardRoutingModule,
     CommonModule
   ],
-  providers: [CharacterService]
+  providers: [
+    CharacterService,
+    ActivityService
+  ]
 })
 export class DashboardModule {
 }

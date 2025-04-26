@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1001,
+    "mission": "Retrieve the Sacred Artifact of Eldoria",
+    "description": "Journey into the Whispering Caves and defeat the Goblin Chieftain to reclaim the artifact stolen from the village.",
+    "points": 10,
+    "isCompleted": false
+  },
+  {
+    "id": 1002,
+    "mission": "Gather 10 Moonpetal Herbs",
+    "description": "Find and collect 10 Moonpetal Herbs from the Moonlit Forest for the Alchemist Lyra.",
+    "points": 10,
+    "isCompleted": false
+  },
+  {
+    "id": 1003,
+    "mission": "Clear the Infested Farmlands",
+    "description": "Defeat 20 Blighted Scarecrows and the Greater Rotling terrorizing the farms west of Oakhaven.",
+    "points": 10,
+    "isCompleted": false
+  },
+  {
+    "id": 1004,
+    "mission": "Deliver the Merchant's Ledger",
+    "description": "Safely transport the valuable ledger from Silverwood City to the trading post in the Crimson Desert. Beware of bandits!",
+    "points": 10,
+    "isCompleted": false
+  }
+]
