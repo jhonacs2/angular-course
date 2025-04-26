@@ -8,4 +8,5 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 export class TaskCardComponent {
   @Input() taskName: string = '';
   @Input() points: number = 0;
+  @Input() iconClass: string = '';
 }

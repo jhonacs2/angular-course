@@ -3,7 +3,6 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 @Component({
   selector: 'tm-level-progress',
   templateUrl: './level-progress.component.html',
-  styleUrls: ['./level-progress.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LevelProgressComponent {
