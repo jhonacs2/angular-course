@@ -1,0 +1,66 @@
+<section class="bg-zinc-950 text-white min-h-screen flex items-center">
+  <div class="container mx-auto px-4 py-8 max-w-5xl">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-4 text-purple-400">Weekly Activity</h3>
+        <div class="bar-chart-container">
+          <div class="bar-chart-bars">
+            <div class="bar" style="height: 80%;"></div>
+            <div class="bar" style="height: 50%;"></div>
+            <div class="bar" style="height: 90%;"></div>
+            <div class="bar" style="height: 65%;"></div>
+            <div class="bar" style="height: 75%;"></div>
+            <div class="bar" style="height: 40%;"></div>
+            <div class="bar" style="height: 88%;"></div>
+          </div>
+          <div class="flex justify-around mt-2">
+            <div class="bar-label">Mon</div>
+            <div class="bar-label">Tue</div>
+            <div class="bar-label">Wed</div>
+            <div class="bar-label">Thu</div>
+            <div class="bar-label">Fri</div>
+            <div class="bar-label">Sat</div>
+            <div class="bar-label">Sun</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow-lg flex flex-col items-center justify-center">
+        <h3 class="text-lg font-semibold mb-4 text-green-400">Quest Completion</h3>
+        <div class="progress-ring text-gray-100">75%</div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-4 text-blue-400">Resource Gathering</h3>
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center">
+            <div class="w-24 text-sm text-gray-300 mr-2">Wood:</div>
+            <div class="flex-1 bg-gray-700 rounded-full h-4">
+              <div class="bg-yellow-500 h-4 rounded-full" style="width: 70%;"></div>
+            </div>
+            <div class="ml-2 text-sm text-gray-300">70%</div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-24 text-sm text-gray-300 mr-2">Stone:</div>
+            <div class="flex-1 bg-gray-700 rounded-full h-4">
+              <div class="bg-gray-400 h-4 rounded-full" style="width: 55%;"></div>
+            </div>
+            <div class="ml-2 text-sm text-gray-300">55%</div>
+          </div>
+          <div class="flex items-center">
+            <div class="w-24 text-sm text-gray-300 mr-2">Iron:</div>
+            <div class="flex-1 bg-gray-700 rounded-full h-4">
+              <div class="bg-red-600 h-4 rounded-full" style="width: 30%;"></div>
+            </div>
+            <div class="ml-2 text-sm text-gray-300">30%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-gray-800 rounded-lg p-6 shadow-lg">
+        <canvas style="width: 100%" tmChart type="bar" [dataChart]="dataChart"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
