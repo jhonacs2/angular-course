@@ -37,7 +37,7 @@ export class DashboardComponent {
     this._addActivitySubject.next(activityResponse);
   }
 
-  trackByActivity(i: number, activity: ActivityResponse): any {
+  trackByActivity(i: number, activity: ActivityResponse): number {
     return activity.id;
   }
 }

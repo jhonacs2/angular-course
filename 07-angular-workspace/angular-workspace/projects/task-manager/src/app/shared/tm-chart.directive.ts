@@ -15,11 +15,16 @@ export class TmChartDirective<
 
   private _chart!: Chart<TType, TData, TLabel>;
 
-  constructor(private _elementRef: ElementRef) {
+  constructor(private _elementRef: ElementRef<HTMLCanvasElement>) {
   }
 
   ngOnInit(): void {
-    this._chart = new Chart(this._elementRef.nativeElement, this.getChartConfiguration());
+    if (this._elementRef.nativeElement instanceof HTMLCanvasElement) {
+      this._chart = new Chart(this._elementRef.nativeElement, this.getChartConfiguration());
+    } else {
+      console.error('TmChartDirective: Provided element is not a canvas');
+      throw new Error('Element is not a canvas');
+    }
   }
 
   private getChartConfiguration(): ChartConfiguration<TType, TData, TLabel> {
