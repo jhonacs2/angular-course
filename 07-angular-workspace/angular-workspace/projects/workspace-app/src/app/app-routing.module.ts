@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'library',
     loadChildren: () => import('./components/library-view/library.module').then(m => m.LibraryModule)
+  },
+  {
+    path: 'pro',
+    loadChildren: () => import('./features/forms/forms.module').then(m => m.FormsModule)
   }
 ];
 

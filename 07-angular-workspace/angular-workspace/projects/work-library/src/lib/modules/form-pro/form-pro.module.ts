@@ -1,20 +1,45 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import { InputProComponent } from './components/input-pro/input-pro.component';
-import {ChipsModule} from 'primeng/chips';
+import {
+  CheckboxComponent,
+  DropdownComponent,
+  InputErrorProComponent,
+  InputProComponent,
+  TextAreaProComponent
+} from './components';
 import {ReactiveFormsModule} from '@angular/forms';
-import { InputErrorProComponent } from './components/input-error-pro/input-error-pro.component';
+import {FormBuilderComponent} from './factory/form-builder/form-builder.component';
+import {FormCoreComponent} from './factory/form-core/form-core.component';
+import {FormProService} from './services/form-pro.service';
+import {InputTextareaModule} from 'primeng/inputtextarea';
+import {PaginatorModule} from 'primeng/paginator';
+import {ChipsModule} from 'primeng/chips';
+import {CheckboxModule} from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
     InputProComponent,
-    InputErrorProComponent
+    InputErrorProComponent,
+    DropdownComponent,
+    FormBuilderComponent,
+    FormCoreComponent,
+    CheckboxComponent,
+    TextAreaProComponent,
+    FormCoreComponent
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    InputTextareaModule,
+    PaginatorModule,
     ChipsModule,
-    ReactiveFormsModule
-  ]
+    CheckboxModule,
+  ],
+  exports: [
+    FormCoreComponent,
+    FormBuilderComponent
+  ],
+  providers: [FormProService]
 })
 export class FormProModule {
 }

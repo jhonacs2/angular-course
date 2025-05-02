@@ -1,0 +1,18 @@
+<section class="grid" [ngClass]="styleClass" [formGroup]="form">
+  <ng-container *ngFor="let field of fields">
+    <ng-container *ngIf="field.group; else elseTemplate">
+      <!-- * Define column size -->
+      <div [class]="field.colSize">
+        <ng-container *ngFor="let subfield of field.group">
+          <!-- * Find and use type of control -->
+          <wl-form-core [field]="subfield"></wl-form-core>
+        </ng-container>
+      </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div [class]="field.colSize">
+        <wl-form-core [field]="field"></wl-form-core>
+      </div>
+    </ng-template>
+  </ng-container>
+</section>`,

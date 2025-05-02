@@ -1,8 +1,8 @@
-import {Component, Input, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@angular/core';
 import {ControlContainer, FormGroup, FormGroupDirective} from '@angular/forms';
 
 @Component({
-  selector: 'lib-input-pro',
+  selector: 'wl-textarea-pro',
   templateUrl: './input-pro.component.html',
   encapsulation: ViewEncapsulation.None,
   viewProviders: [
@@ -12,7 +12,7 @@ import {ControlContainer, FormGroup, FormGroupDirective} from '@angular/forms';
     }
   ]
 })
-export class InputProComponent {
+export class TextAreaProComponent {
   @Input() options: any;
   @Input() customFormGroup: any;
 
@@ -23,7 +23,7 @@ export class InputProComponent {
 
   onChange(event: Event): void {
     const formGroup = this.controlContainer.control as FormGroup;
-    console.log(formGroup);
+
     this.errors = formGroup.controls[this.options.formControlName].errors;
     if (this.errors) {
       this.errors.errorMessage = this.options?.errorMessage;

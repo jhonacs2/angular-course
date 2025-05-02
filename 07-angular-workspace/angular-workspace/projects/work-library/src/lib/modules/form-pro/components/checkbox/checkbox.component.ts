@@ -1,32 +1,29 @@
-import {Component, Input, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, ViewEncapsulation} from '@angular/core';
 import {ControlContainer, FormGroup, FormGroupDirective} from '@angular/forms';
 
 @Component({
-  selector: 'lib-input-pro',
-  templateUrl: './input-pro.component.html',
+  selector: 'wl-checkbox',
+  templateUrl: './checkbox.component.html',
   encapsulation: ViewEncapsulation.None,
   viewProviders: [
     {
       provide: ControlContainer,
-      useClass: FormGroupDirective
-    }
-  ]
+      useExisting: FormGroupDirective,
+    },
+  ],
 })
-export class InputProComponent {
+export class CheckboxComponent {
+  errors: any = {};
+
   @Input() options: any;
   @Input() customFormGroup: any;
-
-  errors: any = {};
 
   constructor(public controlContainer: ControlContainer) {
   }
 
-  onChange(event: Event): void {
+  onChange(event: Event) {
     const formGroup = this.controlContainer.control as FormGroup;
-    console.log(formGroup);
+
     this.errors = formGroup.controls[this.options.formControlName].errors;
-    if (this.errors) {
-      this.errors.errorMessage = this.options?.errorMessage;
-    }
   }
 }
