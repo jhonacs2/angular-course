@@ -1,0 +1,36 @@
+<ng-container *ngIf="(product$ | async) as product">
+  <p-card styleClass="p-d-flex p-flex-column p-h-full product-card">
+
+    <ng-template pTemplate="header">
+      <div class="product-image-container p-p-3">
+        <img [src]="product.image" [alt]="product.title" class="product-image"/>
+      </div>
+    </ng-template>
+
+    <div class="p-card-body p-p-3">
+      <h5 class="p-text-truncate p-mb-2">{{ product.title }}</h5>
+
+      <p class="p-mb-3 product-price">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</p>
+
+      <p-rating [(ngModel)]="product.rating.rate" [readonly]="true" [cancel]="false" class="p-mb-3"></p-rating>
+
+    </div>
+
+    <ng-template pTemplate="footer">
+      <div class="p-mt-auto p-p-3">
+        <div class="p-d-flex p-ai-center p-jc-between">
+          <p-tag [value]="product.category" severity="info" styleClass="p-mr-2"></p-tag>
+
+          <div>
+<!--            <button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-text p-mr-1"-->
+<!--                    (click)="viewDetails(product.id)"></button>-->
+<!--            <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-success"-->
+<!--                    (click)="addToCart(product)"></button>-->
+          </div>
+        </div>
+      </div>
+    </ng-template>
+
+  </p-card>
+
+</ng-container>

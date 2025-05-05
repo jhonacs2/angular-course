@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BlogComponent} from './blog/blog.component';
-import {BlogsRoutingModule} from './blogs-routing.module';
+import {ProductRoutingModule} from './product-routing.module';
 import {ProductService} from './services/product.service';
 import {SkeletonModule} from 'primeng/skeleton';
 import {DataViewModule} from 'primeng/dataview';
@@ -10,15 +9,19 @@ import {RatingModule} from 'primeng/rating';
 import {PaginatorModule} from 'primeng/paginator';
 import {TagModule} from 'primeng/tag';
 import {ButtonModule} from 'primeng/button';
+import {ProductListComponent} from './components/product-list/product-list.component';
+import { ProductComponent } from './components/product/product.component';
+import {RippleModule} from 'primeng/ripple';
 
 
 @NgModule({
   declarations: [
-    BlogComponent
+    ProductListComponent,
+    ProductComponent
   ],
   imports: [
     CommonModule,
-    BlogsRoutingModule,
+    ProductRoutingModule,
     SkeletonModule,
     DataViewModule,
     CardModule,
@@ -26,10 +29,11 @@ import {ButtonModule} from 'primeng/button';
     PaginatorModule,
     TagModule,
     ButtonModule,
+    RippleModule,
   ],
   providers: [
     ProductService
   ]
 })
-export class BlogsModule {
+export class ProductModule {
 }

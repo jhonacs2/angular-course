@@ -1,19 +1,18 @@
 import {Component, OnInit} from '@angular/core';
-import {ProductService} from '../services/product.service';
+import {ProductService} from '../../services/product.service';
 import {Observable} from 'rxjs';
-import {ProductResponse} from '../interfaces/product-response.interface';
-import {catchError, finalize, tap} from 'rxjs/operators';
+import {ProductResponse} from '../../interfaces/product-response.interface';
+import {catchError, finalize, shareReplay, tap} from 'rxjs/operators';
 
 @Component({
-  selector: 'hp-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss']
+  selector: 'hp-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class ProductListComponent implements OnInit {
   products$: Observable<ProductResponse[]> | undefined;
   loading: boolean = true;
   error: boolean = false;
-  // Array para skeletons
   skeletonItems = Array(8).fill(0);
 
   constructor(private _productService: ProductService) {
