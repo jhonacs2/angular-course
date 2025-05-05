@@ -39,7 +39,8 @@
             ],
             "scripts": [],
             "serviceWorker": true,
-            "ngswConfigPath": "projects/blog/ngsw-config.json"
+            "ngswConfigPath": "projects/blog/ngsw-config.json",
+            "webWorkerTsConfig": "projects/blog/tsconfig.worker.json"
           },
           "configurations": {
             "production": {
@@ -108,7 +109,8 @@
             "styles": [
               "projects/blog/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "webWorkerTsConfig": "projects/blog/tsconfig.worker.json"
           }
         }
       }

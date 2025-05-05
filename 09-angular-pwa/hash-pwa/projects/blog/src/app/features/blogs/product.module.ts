@@ -12,6 +12,7 @@ import {ButtonModule} from 'primeng/button';
 import {ProductListComponent} from './components/product-list/product-list.component';
 import { ProductComponent } from './components/product/product.component';
 import {RippleModule} from 'primeng/ripple';
+import {ChipsModule} from 'primeng/chips';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {RippleModule} from 'primeng/ripple';
     TagModule,
     ButtonModule,
     RippleModule,
+    ChipsModule,
   ],
   providers: [
     ProductService

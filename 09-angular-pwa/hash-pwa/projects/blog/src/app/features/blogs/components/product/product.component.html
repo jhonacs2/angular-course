@@ -22,15 +22,16 @@
           <p-tag [value]="product.category" severity="info" styleClass="p-mr-2"></p-tag>
 
           <div>
-<!--            <button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-text p-mr-1"-->
-<!--                    (click)="viewDetails(product.id)"></button>-->
-<!--            <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-success"-->
-<!--                    (click)="addToCart(product)"></button>-->
+            <button pButton pRipple type="button" icon="pi pi-search" class="p-button-rounded p-button-text p-mr-1"
+                    (click)="startHeavyTask(10)">Start Heavy</button>
+            <!--            <button pButton pRipple type="button" icon="pi pi-shopping-cart" class="p-button-rounded p-button-success"-->
+            <!--                    (click)="addToCart(product)"></button>-->
           </div>
         </div>
       </div>
     </ng-template>
 
   </p-card>
-
+  <input type="text" pInputText>
 </ng-container>
+
