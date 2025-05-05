@@ -1,0 +1,66 @@
+<h2>Catálogo de Productos</h2>
+
+<div *ngIf="error" class="p-message p-message-error">
+  <i class="pi pi-exclamation-triangle p-mr-2"></i>
+  <span>Error al cargar los productos. Intenta de nuevo más tarde.</span>
+</div>
+
+<div *ngIf="loading && !(products$ | async)" class="p-grid p-nogutter">
+  <div *ngFor="let item of skeletonItems" class="p-col-12 p-md-4 p-lg-3 p-p-2 p-d-flex">
+    <!-- Aplicamos estructura flex y altura completa al skeleton card -->
+    <div class="p-card p-p-3 p-d-flex p-flex-column p-h-full">
+      <p-skeleton height="150px" styleClass="p-mb-2"></p-skeleton>
+      <p-skeleton width="70%" styleClass="p-mb-2"></p-skeleton>
+      <p-skeleton width="40%" styleClass="p-mb-2"></p-skeleton>
+      <!-- Empujamos el footer del skeleton hacia abajo -->
+      <div class="p-d-flex p-jc-between p-mt-auto">
+        <p-skeleton width="5rem" height="2rem"></p-skeleton>
+        <p-skeleton width="6rem" height="2rem"></p-skeleton>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p-dataView #dv [value]="(products$ | async)!" layout="grid" [paginator]="false" [rows]="12"
+            *ngIf="!loading && !error && (products$ | async)?.length"
+            [trackBy]="trackById"
+            styleClass="product-grid">
+
+  <ng-template let-product pTemplate="gridItem">
+    <div class="p-col-12 p-md-4 p-lg-3 p-p-2 p-d-flex">
+      <p-card styleClass="p-d-flex p-flex-column p-h-full p-flex-grow-1 product-card"> <!-- Clase opcional -->
+        <ng-template pTemplate="header">
+          <div class="product-image-container p-p-3">
+            <img [src]="product.image" [alt]="product.title" class="product-image"/>
+          </div>
+        </ng-template>
+
+        <div class="p-card-body p-p-3">
+          <h5 class="p-text-truncate p-mb-2">{{ product.title }}</h5>
+          <p class="p-mb-3">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</p>
+          <p-rating [(ngModel)]="product.rating.rate" [readonly]="true" [cancel]="false" class="p-mb-3"></p-rating>
+        </div>
+
+        <ng-template pTemplate="footer">
+          <div class="p-mt-auto p-p-3">
+            <div class="p-d-flex p-ai-center p-jc-between">
+              <p-tag [value]="product.category" severity="info"></p-tag>
+              <button pButton type="button" icon="pi pi-eye" label="Detalles"
+                      [routerLink]="['/products', product.id]"></button>
+            </div>
+          </div>
+        </ng-template>
+      </p-card>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="emptymessage">
+    <div class="p-col-12 p-text-center p-p-3">
+      No se encontraron productos.
+    </div>
+  </ng-template>
+</p-dataView>
+
+<div *ngIf="!(products$ | async)?.length && !loading && !error" class="p-col-12 p-text-center p-p-3">
+  No se encontraron productos.
+</div>
