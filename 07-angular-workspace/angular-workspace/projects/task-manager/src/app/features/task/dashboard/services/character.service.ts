@@ -13,11 +13,7 @@ export class CharacterService {
     creativity: 30,
     coins: 150
   };
-  private _characterState: BehaviorSubject<ICharacter> = new BehaviorSubject<ICharacter>(this._initialCharacterState);
+  private _characterStateSubject: BehaviorSubject<ICharacter> = new BehaviorSubject<ICharacter>(this._initialCharacterState);
 
-  private _characterState$: Observable<ICharacter> = this._characterState.asObservable();
-
-  get characterState$(): Observable<ICharacter> {
-    return this._characterState$;
-  }
+  characterState$: Observable<ICharacter> = this._characterStateSubject.asObservable();
 }
